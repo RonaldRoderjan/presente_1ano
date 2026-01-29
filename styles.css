@@ -1,0 +1,66 @@
+:root {
+    --primary-pink: #ffb7c5;
+    --dark-pink: #ff85a1;
+    --bg-color: #fffafa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: #444;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--primary-pink), var(--bg-color));
+}
+
+.timeline {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois cards por linha no celular */
+    gap: 15px;
+}
+
+.month-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.month-card:active { transform: scale(0.95); }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    width: 85%;
+    max-height: 80vh;
+    border-radius: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+img { width: 100%; border-radius: 10px; }

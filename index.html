@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - 365 Dias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Nossa História</h1>
+        <p>365 dias de nós dois ❤️</p>
+        <div class="scroll-indicator">⬇</div>
+    </header>
+
+    <main class="timeline">
+        <div class="month-card" onclick="openMoment('Mes 1', 'Nossa primeira foto!', 'URL_DA_FOTO', 'LINK_SPOTIFY')">
+            <div class="month-number">01</div>
+            <div class="month-label">O Começo</div>
+        </div>
+        
+        </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modal-img" src="" alt="Momento">
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+            <div id="modal-music"></div>
+            <button class="close-btn" onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="final-surprise">
+        <button id="next-chapter" onclick="showSurprise()">O que vem agora? ✨</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
